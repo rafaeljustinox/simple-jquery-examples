@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index</title>
+<script src="js/jquery.js"></script>
+
+<script>
+
+    $("document").ready(function(){
+
+        $("#slide-up").click(function(){
+            $("#textBox").slideUp("2000", "linear");
+        });
+
+        $("#slide-down").click(function(){
+            $("#textBox").slideDown("2000", "linear");
+        });
+
+        $("#toggleSlide").click(function(){
+
+            $("#textBox").slideToggle("2000", function(){
+                alert("Done");
+            });
+
+        });
+
+
+    });
+
+</script>
+
+<style>
+    
+    #textBox {
+        display: none;
+    }
+
+
+</style>
+
+</head>
+<body>
+
+    <a href="#" id="slide-up">UP</a>
+    <a href="#" id="slide-down">DOWN</a>
+    <a href="#" id="toggleSlide">Toggle</a>
+
+    <div id="textBox">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+        
+        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+
+</body>
+</html>
